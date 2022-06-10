@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+</head>
+
+<body>
+
+  <header class="hero bg-intro">
+    <nav class="flex container">
+      <a href=""><img class="logo" src="./images/logo.svg" alt="Fylo"></a>
+      <ul class="nav__list--primary flex">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero__content container flow-content">
+      <img src="./images/illustration-intro.png" alt="two people placing files in an envelope">
+      <h1 class="title">All your files in one secure location, accessible anywhere.</h1>
+      <p class="body">
+        Fylo stores all your most important files in one secure location. Access them wherever
+        you need, share and collaborate with friends family, and co-workers.
+      </p>
+      <button class="btn">Get Started</button>
+    </section>
+  </header>
+
+  <main class="bg-main">
+    <div class="features container grid">
+      <section class="flow-content">
+        <img src="./images/icon-access-anywhere.svg" alt="">
+        <h3 class="title">Access your files, anywhere</h3>
+        <p>
+          The ability to use a smartphone, tablet, or computer to access your account means your
+          files follow you everywhere.
+        </p>
+      </section>
+      <section class="flow-content">
+        <img src="./images/icon-security.svg" alt="">
+        <h3 class="title">Security you can trust</h3>
+        <p>
+          2-factor authentication and user-controlled encryption are just a couple of the security
+          features we allow to help secure your files.
+        </p>
+      </section>
+      <section class="flow-content">
+        <img src="./images/icon-collaboration.svg" alt="">
+        <h3 class="title">Real-time collaboration</h3>
+        <p>
+          Securely share files and folders with friends, family and colleagues for live collaboration.
+          No email attachments required.
+        </p>
+      </section>
+      <section class="flow-content">
+        <img src="./images/icon-any-file.svg" alt="">
+        <h3 class="title">Store any type of file</h3>
+        <p>
+          Whether you' re sharing holidays photos or work documents, Fylo has you covered allowing for all file types
+          to be securely stored and shared. </p>
+      </section>
+    </div>
+
+    <div class="flex productive container">
+      <img src="./images/illustration-stay-productive.png" alt="">
+
+      <section class="content flow-content">
+        <h2 class="title">Stay productive, wherever you are</h2>
+        <p class="body">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file
+          storage needs.
+        </p>
+        <p class="body">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email
+          attachments required.
+        </p>
+        <a href="#" class="works">See how Fylo works</a>
+      </section>
+    </div>
+
+    <div class="testimonials container flex">
+
+      <blockquote class="testimonial bg-testimonial">
+        <p class="body">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <section class="profile">
+          <img src="./images/profile-1.jpg" alt="">
+          <p class="name">Satish Patel</p>
+          <p class="job-title">Founder & CEO, Huddle</p>
+        </section>
+      </blockquote>
+      <blockquote class="testimonial bg-testimonial">
+        <p class="body">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <section class="profile">
+          <img src="./images/profile-2.jpg" alt="">
+          <p class="name">Bruce McKenzie</p>
+          <p class="job-title">Founder & CEO, Huddle</p>
+        </section>
+      </blockquote>
+      <blockquote class="testimonial bg-testimonial">
+        <p class="body">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.
+        </p>
+        <section class="profile">
+          <img src="./images/profile-3.jpg" alt="">
+          <p class="name">Iva Boyd</p>
+          <p class="job-title">Founder & CEO, Huddle</p>
+        </section>
+      </blockquote>
+    </div>
+
+    <section class="access container bg-access">
+      <div class="content">
+        <h2 class="title">Get early access today</h2>
+        <p class="body">
+          It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+          questions, our support team would be happy to help you.
+        </p>
+        <form class="access-form" name="accessForm" action="">
+          <input aria-label="type email address" type="email" name="email" placeholder="email@example.com" required>
+          <p class="error">Error, please check your email</p>
+          <button type="submit" class="btn btn--access">Get Started For Free</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-footer">
+    <div class="container">
+      <a href="#"><img class="logo" src="./images/logo.svg" alt="Fylo"></a>
+      <nav class="flex flow-content">
+        <ul class="nav__list--secondary">
+          <li class="location">
+            <img src="./images/icon-location.svg" alt="pin drop">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua
+            </p>
+          </li>
+        </ul>
+        <ul class="nav__list--secondary flow-content">
+          <li class="phone"><img src="./images/icon-phone.svg" alt="phone with sound waves">+1-543-123-4567</li>
+          <li class="email"><img src="./images/icon-email.svg" alt="the letter M on a box"> example@fylo.com</li>
+        </ul>
+        <ul class="nav__list--secondary flow-content">
+          <li class="nav__list--item">About Us</li>
+          <li class="nav__list--item">Jobs</li>
+          <li class="nav__list--item">Press</li>
+          <li class="nav__list--item">Blog</li>
+        </ul>
+        <ul class="nav__list--secondary flow-content">
+          <li class="nav__list--item">Contact Us</li>
+          <li class="nav__list--item">Terms</li>
+          <li class="nav__list--item">Privacy</li>
+        </ul>
+        <ul class="social-list flex">
+          <li class="social-item">
+            <a aria-label="Facebook" href="#" class="social-link">
+              <i class="fab fa-facebook-f fa-sm"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a aria-label="Twitter" href="#" class="social-link">
+              <i class="fab fa-twitter fa-sm"></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a aria-label="Instagram" href="#" class="social-link">
+              <i class="fab fa-instagram fa-sm"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Kellen Ruyle</a>.
+    </p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

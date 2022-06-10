@@ -1,0 +1,127 @@
+@use "sass:map";
+// ##### Colors ######
+// ### Primary
+
+$dark-blue: (
+  //  (intro and email sign up background)
+  bg-intro: hsl(217, 28%, 15%),
+  // (main background)
+  bg-main: hsl(218, 28%, 13%),
+  // (footer background)
+  bg-footer: hsl(216, 53%, 9%),
+  // (testimonials background)
+  bg-testimonials: hsl(219, 30%, 18%),
+);
+
+$accent: (
+  // ### Accent
+  // (inside call-to-action gradient)
+  cyan: hsl(176, 68%, 64%),
+  blue: hsl(198, 60%, 50%),
+  // (error):
+  light-red: hsl(0, 100%, 63%),
+);
+
+@function dark-blue($key) {
+  @if map-has-key($dark-blue, $key) {
+    @return map-get($dark-blue, $key);
+  }
+}
+
+@function accent($key) {
+  @if map-has-key($accent, $key) {
+    @return map-get($accent, $key);
+  }
+}
+
+// ### Neutral
+$white: hsl(0, 0%, 100%);
+
+// ##### Typography ######
+$ff-primary: 'Raleway',
+  sans-serif;
+$ff-secondary: 'Open Sans',
+  sans-serif;
+
+$fs-body: 0.875rem;
+
+$fw-400: 400;
+$fw-700: 700;
+
+// breakpoints
+$breakpoints: (
+  tablet: 40em,
+  desktop: 65em,
+);
+
+$br: 4px;
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+body {
+  --bg: #{dark-blue(bg-intro)};
+  position: relative;
+  font-family: $ff-secondary;
+  font-size: $fs-body;
+
+}
+
+[class*='bg-'] {
+  background-color: var(--bg, dark-blue(bg-intro));
+  color: $white;
+}
+
+.bg-intro {
+  --bg: #{dark-blue(bg-intro)};
+}
+
+.bg-main {
+  --bg: #{dark-blue(bg-main)};
+}
+
+.bg-testimonial {
+  --bg: #{dark-blue(bg-testimonials)};
+}
+
+.bg-access {
+  --bg: #{dark-blue(bg-intro)};
+}
+
+.bg-footer {
+  --bg:#{dark-blue(bg-footer)};
+}
+
+.flow-content>*+* {
+  margin-top: var(--gap, 2rem);
+}
+
+.container {
+  width: clamp(20.6875rem, 85%, 80rem);
+  margin: 0 auto;
+}
+
+.btn {
+  font: inherit;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem 5rem;
+  background: linear-gradient(138.1deg, accent(cyan) -49.34%, accent(blue) 100%);
+  color: $white;
+  font-weight: $fw-700;
+  box-shadow: 2px 3px 6px 0px hsla(0, 0%, 0%, 0.16);
+
+  @include breakpoint(desktop) {
+    cursor: pointer;
+    transition: background .50s ease;
+
+    &:hover {
+      background: hsla(186, 62%, 72%, 1);
+    }
+  }
+}
