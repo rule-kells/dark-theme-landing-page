@@ -129,7 +129,7 @@ nav {
   margin: 10rem auto 10rem;
 
   @include breakpoint(tablet) {
-    margin: 8.5625rem auto 7.5rem;
+    margin: 8.5625rem auto 11.1875rem;
   }
 
   &.container {
@@ -216,6 +216,10 @@ nav {
 
 // testimonials 
 .testimonials {
+
+  @include breakpoint(tablet) {
+    margin-bottom: 10em;
+  }
 
   position: relative;
   box-shadow: 5px 5px 8px 4px hsla(0, 0%, 22%, 0.1);
