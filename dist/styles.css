@@ -289,7 +289,7 @@ nav .nav__list--primary li + li {
 
 @media screen and (min-width: 40em) {
   .productive {
-    margin: 8.5625rem auto 7.5rem;
+    margin: 8.5625rem auto 11.1875rem;
   }
 }
 
@@ -390,6 +390,12 @@ nav .nav__list--primary li + li {
   position: relative;
   -webkit-box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
           box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
+}
+
+@media screen and (min-width: 40em) {
+  .testimonials {
+    margin-bottom: 10em;
+  }
 }
 
 .testimonials:before {
